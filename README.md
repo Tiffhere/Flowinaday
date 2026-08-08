@@ -37,6 +37,4 @@ The original project was hosted on the Western Sydney University student server.
 
 The original MySQL database was hosted on the Western Sydney University server. As access to the server has since been removed, the database dump (`.sql`) is not available in this repository. The source code is provided to demonstrate the application's architecture, implementation, and development approach.
 
-## Author
 
-Ting Wai Chan
