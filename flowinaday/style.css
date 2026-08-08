@@ -1,0 +1,860 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* login */
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login form, .login p {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+
+/* whole page styling */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  
+}
+
+body * {
+  color: #000000;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  color: #000000;
+}
+
+body main, footer {
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navbar styling */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  background-color: #c9a964;
+  height: 60px;
+}
+
+.logo {
+  display:flex;
+  align-items: center;
+  width: 180px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  width: auto;        
+  min-width: 100px;   
+  text-align: center;
+  padding: 10px 15px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  transition: all ease-in-out 0.3s;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navbar responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #C9A964;
+    z-index: 1001;
+    padding: 30px 0;
+    text-align: center;
+    margin:0;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+}
+
+
+
+
+/* index page */
+.indexbody {
+  background-image: url('images/slider1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.indexmain {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center; 
+  
+}
+
+.indexbody main {
+  padding: 0 20px;
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.slider-content h2 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.slider-content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Title section */
+.indexbody main section {
+  padding: 2rem 1rem;
+}
+
+/* User Greeting */
+.indexmain .greeting{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.indexbody main section h1 {
+  font-size: 3.3rem;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.indexbody main section p {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top:0.5rem;
+  margin-bottom:2rem;
+  
+}
+
+.classesBox,
+.signInBox {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.classesBox a.class,
+.signInBox a.signin {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 7; 
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.signInBox a.signin {
+  margin-top: 50px;
+}
+
+.classesBox a.class {
+  background-image: url('images/class4.jpg');
+  
+}
+
+.signInBox a.signin {
+  background-image: url('images/matt.jpg');
+  color: rgba(255, 255, 255, 0.528);
+}
+
+.classesBox a.class h2,
+.signInBox a.signin h2 {
+  margin: 0;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(156, 154, 154, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.classesBox a.class:hover,
+.signInBox a.signin:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(139, 139, 139, 0.7);
+}
+
+
+@media (max-width: 768px) {
+  .indexmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem;
+  }
+
+  .classesBox,
+  .signInBox {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
+  .classesBox a.class h2,
+  .signInBox a.signin h2 {
+    font-size: 1.5rem;
+  }
+
+  .slider {
+    height: 30vh;
+  }
+
+  .slider-content {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .slider-content h2 {
+    font-size: 2rem;
+  }
+
+  .indexmain .greeting {
+    font-size: 1.5rem;
+  }
+
+  .classesBox a.class,
+  .signInBox a.signin {
+    aspect-ratio: 16 / 9;
+    font-size: 1rem;
+  }
+}
+
+
+/* modal content images */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 10px 30px 30px 30px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+} 
+
+.modal-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  aspect-ratio: 4 / 3;
+}
+
+#loginBtn {
+  margin-left: 10px;
+}
+
+.class-card {
+  flex: 1 1 calc(33.333% - 20px); 
+  max-width: 400px;  
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  background-color: #f3ecde;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .class-card {
+    flex-basis: 100%; 
+  }
+}
+
+.class-card img {
+  width: 100%;          
+  max-height: 200px;    
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto; 
+}
+
+.h1class {
+  margin-bottom: 20px !important;
+}
+
+.h1class h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.h1class p {
+  font-size: 1.2rem;       
+  color: #000000;          
+  text-align: center;      
+  margin-top: 5px;         
+  margin-bottom: 10px;     
+  line-height: 1.5;        
+}
+
+.btn-bookclass {
+  display: inline-block;
+  width:110px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 6px;
+  margin-top: 6px;
+  color: #fff ;
+  background-color: #C9A964;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#confirmYesBtn, #confirmNoBtn, #messageCloseBtn, #loginBtn {
+  display: inline-block;
+  width:80px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 6px;
+  margin-top: 6px;
+  color: #fff ;
+  background-color: #C9A964;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* user profile */
+main.container h2 {
+  font-size: 2rem; 
+  font-weight: bold; 
+  margin-bottom: 15px; 
+}
+
+main.container section {
+  background-color: white;  
+  padding: 20px;            
+  margin-bottom: 20px;      
+  border-radius: 8px;       
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+.userprofiletable {
+  margin: 0 auto;          
+  border-collapse: collapse; 
+  border: 1px solid #ddd;
+}
+
+.userprofiletable th{
+  background-color:#c9a964;
+  color:white;
+}
+
+.userprofiletable th, .userprofiletable td {
+  padding: 10px 15px;       
+  text-align: center;       
+}
+
+.userprofiletable tr:hover {
+  background-color: #f3ecde;
+}
+
+.btn-updateemail {
+  display: inline-block;
+  width: 125x;
+  text-align: center;
+  padding: 3px 20px;
+  margin-left: 6px;
+  margin-top: 6px;
+  color: #fff ;
+  background-color: #C9A964;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.usercontainer h3{
+  margin-top: 20px;
+}
+
+/* User and Classes Table */
+.admintable {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+.admintable th, .admintable td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.admintable td:nth-child(7) {
+max-width: 250px;
+white-space: nowrap; 
+overflow: hidden;    
+text-overflow: ellipsis; 
+}
+.passwordlength {
+  white-space: nowrap; 
+  overflow: hidden;    
+  text-overflow: ellipsis; 
+}
+
+.admintable th {
+  background-color: #C9A964;
+  color: #fff;
+}
+.admintable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.admintable tr:hover {
+  background-color: #f3ecde;
+}
+.admintable a {
+  color: #C9A964;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.admintable a:hover {
+  text-decoration: none;
+}
+
+
+
+  /* Table Responsive */
+  
+  @media (max-width: 768px) {
+    .admintable, .admintable thead, .admintable tbody, .admintable th, .admintable td, .admintable tr {
+      display: block;
+    }
+    .admintable thead tr {
+      display: none;
+    }
+    .admintable tr {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eee;
+    }
+    .admintable td {
+      position: relative;
+      padding-left: 50%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    .admintable td:before {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 45%;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #C9A964;
+      content: attr(data-label);
+    }
+    .passwordlength {
+      display: block;
+              
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+  }
+
+
+/* User and Classes Table button */
+.btn {
+  display: inline-block;
+  width:80px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 6px;
+  margin-top: 6px;
+  color: #fff ;
+  background-color: #C9A964;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-edit {
+  background-color: #51a742;
+  text-decoration: none;
+  color: #fff !important;
+  
+  
+}
+
+.btn-delete {
+  background-color: #d93230;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-adduser {
+  display: inline-block;
+  width:110px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 6px;
+  margin-top: 6px;
+  color: #fff ;
+  background-color: #C9A964;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+/*user and class a tag*/
+.nav-shortcut .active-link {
+  font-weight: bold;
+  color:#C9A964;
+}
+
+/* Login */
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login form,.login p {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+/* Form styling */
+.contact, .login, .createuser, .createclass, .edituser, .editclass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form, .login form, .createuser form, .createclass form, .edituser, .editclass {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+
+.editclass input[type="text"],
+.editclass input[type="datetime-local"],
+.editclass input[type="number"],
+.edituser input[type="text"],
+.edituser input[type="email"],
+.edituser input[type="password"],
+.editclass textarea,
+.createclass input[type="text"],
+.createclass input[type="datetime-local"],
+.createclass input[type="number"],
+.createclass textarea,
+.createuser input[type="text"],
+.createuser input[type="email"],
+.createuser input[type="password"],
+.contact input[type="text"], 
+.contact input[type="email"], 
+.contact input[type="password"],
+.contact input[type="tel"],
+.contact textarea[name="message"],
+.login input[type="text"],
+.login input[type="password"] {
+  width: 100%;        
+  padding: 9px 20px; 
+  font-size: 1.1rem;  
+  box-sizing: border-box; 
+}
+
+
+.login label {
+  display: block;
+}
+
+.login p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.login label[for="password"]{
+  margin-top: 20px;
+}
+
+.editclass input[type="submit"],
+.edituser input[type="submit"],
+.contact input[type="submit"], 
+.login input[type="submit"],
+.createuser input[type="submit"],
+.createclass input[type="submit"]{
+  margin-top: 20px;
+  display: block;          
+  width: 100px;
+  padding: 15px 30px;
+  color: #ffffff;
+  background-color: #C9A964;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-align: center; 
+  border: none;
+  margin: 15px auto 0 auto;
+}
+
+.editclass input[type="submit"]:active,
+.edituser input[type="submit"]:active,
+.contact input[type="submit"]:active,
+.login input[type="submit"]:active,
+.createuser input[type="submit"]:active,
+.creatclass input[type="submit"]:active,
+.btn-adduser:active {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.editclass input[type="submit"]:hover,
+.edituser input[type="submit"]:hover,
+.contact input[type="submit"]:hover,
+.login input[type="submit"]:hover,
+.btn-adduser:hover,
+.btn-addclass:hover {
+  color: #494949;
+  background-color: #FFF9AF;
+  transition: all ease-in-out 0.3s;
+}
+
+.error {
+  color: red; 
+  display: block;
+}
+
+.edituser input[type="radio"] {
+  display: inline;
+  width: auto;
+  margin: 8px 5px 8px 0;
+}
+
+
+.success {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+/* contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 5px;
+  
+}
+
+.contact-image {
+  flex: 0 1 50%;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;      
+  object-fit: cover;
+  max-height: 530px; 
+}
+
+.contact form {
+  flex: 0 1 40%;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+  
+  .contact-image img {
+      height: 300px;
+  }
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto; 
+}
+
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.usercontainer{
+  text-align: center;
+}
+
+/* thank you page */
+.thankyou-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ensures it takes up most of the screen */
+  padding: 2rem;
+  text-align: center;
+}
