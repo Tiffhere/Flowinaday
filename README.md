@@ -35,6 +35,10 @@ The original project was hosted on the Western Sydney University student server.
 
 ## Database
 
-The original MySQL database was hosted on the Western Sydney University server. As access to the server has since been removed, the database dump (`.sql`) is not available in this repository. The source code is provided to demonstrate the application's architecture, implementation, and development approach.
+## Database
+
+For security and privacy reasons, the database connection details (server name, database name, username, and password) have been removed from the source code before publishing this repository.
+
+The original MySQL database was hosted on the Western Sydney University server. As access to the server is no longer available, the database dump (`.sql`) is not included in this repository. The source code is provided to demonstrate the application's architecture, implementation, and development approach.
 
 
